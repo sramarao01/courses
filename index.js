@@ -13,6 +13,10 @@ app.use(json());
 app.use(urlencoded({extended:false}));
 app.use(auth);
 
+app.get('/',(req,res) => {
+  res.send('server running')
+})
+
 app.use("/user",userRouter);
 app.use("/courses",coursesRouter)
 
