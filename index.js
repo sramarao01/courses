@@ -3,8 +3,8 @@ const {json,urlencoded}= require("express");
 
 const userRouter = require("./routers/user");
 const coursesRouter = require("./routers/courses");
-const { default: mongoose } = require("mongoose");
-
+const mongoose  = require("mongoose");
+const auth = require('./middlewares/auth')
 const app = express();
 
 mongoose.connect(process.env.monogodb);
